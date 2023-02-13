@@ -66,7 +66,7 @@ func main() {
 	prometheusMux.Handle("/metrics", prometheusHandler)
 
 	go func() {
-		log.Fatal(http.ListenAndServe(":8000", dMux))
+		log.Fatal(http.ListenAndServe(":8080", dMux))
 	}()
 
 	go func() {

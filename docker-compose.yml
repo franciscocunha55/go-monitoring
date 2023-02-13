@@ -1,8 +1,8 @@
 ---
 version: "3.9"
 services:
-  myapp:
-    build: ./my-app
+  app1:
+    build: ./app1
     ports:
       - 8080:8080
       - 8081:8081
@@ -22,7 +22,7 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=devops123
     volumes:
-      - ./grafana/datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml
+      - ./grafana/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yaml
       - grafana:/var/lib/grafana
 
 volumes:
