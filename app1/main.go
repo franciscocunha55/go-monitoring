@@ -86,5 +86,8 @@ func getDevices(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "applications/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(b)
+}
+
+func createDevice(w http.ResponseWriter, r *http.Request) {
 
 }
